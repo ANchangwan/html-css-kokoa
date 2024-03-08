@@ -1,0 +1,79 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6abcbe;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container > div {
+  margin: 100px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  animation: rotate_img 1s infinite;
+}
+
+.circle > div {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.box > div {
+  margin-right: 5px;
+  height: 80px;
+  width: 20px;
+  background-color: white;
+  animation: ani 0.9s linear infinite;
+}
+
+.box > div:first-child {
+  animation-delay: 0.2s;
+}
+.box > div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.box > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.box > div:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.box > div:last-child {
+  animation-delay: 0.6s;
+}
+
+@keyframes ani {
+  50% {
+    transform: scaleY(1);
+  }
+  70% {
+    transform: scaleY(2);
+  }
+  /* 0% {
+    transform: scaleY(1);
+  } */
+}
+
+@keyframes rotate_img {
+  30% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
